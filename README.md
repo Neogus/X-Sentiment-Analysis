@@ -11,4 +11,4 @@ In order to execute the tool we need to first configure the SA_Keys.py file with
 
 3- Considerations
 
-This tool was designed when Twitter streaming services were free, currently, this service is no longer free so in order to see if this still works you will need APIs from an X-paid account. Since I don't have one I was only able to update the program to a certain point and it may need further debugging and testing that can only be done with these keys. Bear in mind that even with the correct paid-keys the program might present errors due to outdated endpoints and deprecated methods.
+This tool was designed when Twitter streaming services were free, currently, this service is no longer free so in order to see if this still works you will need APIs from an X-paid account. Since I don't have one I was only able to update the program to a certain point and it may need further debugging and testing that can only be done with these keys. Due to the mentioned reasons is IMPORTANT to understand that even with the correct paid-keys the program might present errors due to outdated endpoints and deprecated methods.
