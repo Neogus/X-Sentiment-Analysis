@@ -1,10 +1,16 @@
+import datetime as dt
+import time
 import pandas as pd
 import seaborn as sns # This library improves the graphics
 sns.set_style(rc={'patch.edgecolor': '4E4E4E'}) # Activates a style
 pd.options.display.max_colwidth = 300
 from SA_Fun import *
 
+start_time = time.time()
+print(f'{dt.datetime.now().strftime("%H:%M:%S")} \n')
+
 auth, api, analyzer = initialize() #Authenticate Account
+
 mode_dic = {'everyone': sentiment_by_influence(tweet_count, api), 'influencers': sentiment_by_community(time_limit, output_file, auth)}
 dfb = pd.DataFrame(columns=['Datetime', 'Minutes', 'Filtered Tweets', 'Tweets per Min', 'P.Strength','P.Index','N.Strength','N.Index','C.Strength','S.Index','Price'])
 dfc = pd.DataFrame(columns=['Datetime', 'P.Signal', 'S.Signal' ])
@@ -18,6 +24,3 @@ for x in range(300):
     plot(dfd)
     dfd = backtest(dfb, dfd)
     time.sleep(1)
-
-
-
