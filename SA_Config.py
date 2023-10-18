@@ -1,6 +1,4 @@
-import datetime as dt
-import time
-import SA_Main
+
 
 # Stream will stop when reaching an amount of tweets or when reaching an amount of time by checking variables in that order.
 ta_mode = 'everyone'  # ta_mode defines where the sentiment comes from either by everyone or by a group of user defined in "influencers" variable.
@@ -37,10 +35,5 @@ influencers = ("@NickSzabo4", "@nic__carter", "@CarpeNoctom", "@ToneVays", "@Mel
 
 keywords = ["cryptocurrency", "digital asset", "crypto", "btc", "bitcoin", "satoshi", "bch", "eth", "ethereum"]
 
-start_time = time.time()
-print(f'{dt.datetime.now().strftime("%H:%M:%S")} \n')
-
 long_context = False
 short_context = False
-
-SA_Main
